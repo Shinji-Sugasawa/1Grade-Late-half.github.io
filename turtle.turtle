@@ -1,0 +1,20 @@
+kturtle-script-v1.0
+@(reset)
+
+@(learn) square $size
+{
+ @(repeat) 4
+ {
+  @(forward) $size
+  @(turnright) 90
+ }
+}
+
+@(repeat) 10
+{
+ $x=@(random) 0@(,)300
+ $y=@(random) 0@(,)300
+ @(go) $y@(,)$x
+ $size=@(random) 10@(,)100
+ square $size
+}
